@@ -1,0 +1,19 @@
+<ion-header no-border color="dark">
+    <ion-toolbar color="dark">
+        <ion-title>contactos</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" padding>
+    <ion-button (click)="listarContactos()">Listar Contactos</ion-button>
+    <ion-list color="dark">
+        <ion-item color="dark" *ngFor="let c of datosObtenidos">
+            <h2>
+                <ion-text color="light">{{c?.displayName}}</ion-text>
+            </h2>
+            <p *ngFor="let n of c?.phoneNumbers">
+                <ion-text color="light">{{n.value}}</ion-text>
+            </p>
+        </ion-item>
+    </ion-list>
+</ion-content>

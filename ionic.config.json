@@ -1,0 +1,7 @@
+{
+  "name": "MovApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

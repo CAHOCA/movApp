@@ -1,0 +1,17 @@
+{
+    "PAGES": {
+        "HOME": {
+            "TITLE": "Test de Movimiento",
+            "CONTENT": "Suma x+y+z",
+            "DEDO_RECONOCIDO": "¡Dedo reconocido! ",
+            "DEDO_NO_RECONOCIDO": "¡No se puede reconocer el dedo! ",
+            "INICIAR_BTN": "Iniciar",
+            "DETENER_BTN": "Detener",
+            "DEDO_BTN": "Dedo",
+            "GUARDAR_STG": "Guardar en Storage",
+            "RESCATAR_STG": "Rescatar nombre Storage",
+            "EL_NOMBRE_ES": "El nombre es: ",
+            "NO_HAY_DATOS": "No hay datos almacenados en el sistema "
+        }
+    }
+}

@@ -1,0 +1,71 @@
+<ion-header no-border>
+    <ion-toolbar color='linear-gradient(to right, rgb(243, 169, 169), rgb(218, 32, 32))'>
+        <ion-title color="light">
+            {{ 'PAGES.HOME.TITLE' | translate }}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="dark">
+    <div full>
+        <h6> Mov:{{mov}} </h6>
+    </div>
+    <div full>
+        <h2> X:{{x}} </h2>
+    </div>
+    <div full>
+        <h2> Y:{{y}} </h2>
+    </div>
+
+    <div full>
+        <h2> Z:{{z}} </h2>
+    </div>
+
+    <div full>
+        <h6> {{'PAGES.HOME.CONTENT' | translate}}:{{acelera}} </h6>
+    </div>
+
+
+    <ion-button (click)="start()">
+        {{ 'PAGES.HOME.INICIAR_BTN' | translate }}
+    </ion-button>
+    <ion-button (click)="stop()">
+        {{ 'PAGES.HOME.DETENER_BTN' | translate }}
+    </ion-button>
+
+    <ion-button (click)="Dedo()">
+        {{ 'PAGES.HOME.DEDO_BTN' | translate }}
+    </ion-button>
+
+    <form #GuardarForm="ngForm" novalidate>
+        <ion-input [(ngModel)]="nombre" name="nombre" placeholder="Guardar en Storage"></ion-input>
+        <ion-button (click)="guardarStorage(GuardarForm)">
+            {{ 'PAGES.HOME.GUARDAR_STG' | translate }}
+        </ion-button>
+        <ion-button (click)="CargarStorage()">
+            {{ 'PAGES.HOME.RESCATAR_STG' | translate }}
+        </ion-button>
+        <div *ngIf=nombre>
+            <h3>{{ 'PAGES.HOME.EL_NOMBRE_ES' | translate }}: <strong>{{nombre}}</strong></h3>
+        </div>
+        <div *ngIf=!nombre>
+            <h3 color="danger">{{ 'PAGES.HOME.NO_HAY_DATOS' | translate }}</h3>
+        </div>
+    </form>
+
+    <div full *ngIf="dedoOK===true">
+        <h2>
+            <ion-text color="success">{{ 'PAGES.HOME.DEDO_RECONOCIDO' | translate }}</ion-text>
+        </h2>
+    </div>
+
+    <div full *ngIf="dedoOK===false">
+        <h2>
+            <ion-text color="danger">{{ 'PAGES.HOME.DEDO_NO_RECONOCIDO' | translate }}</ion-text>
+        </h2>
+    </div>
+    <div full>
+        <ion-button (click)="abrirContactos()">Abrir Libreta de contactos</ion-button>
+    </div>
+
+</ion-content>

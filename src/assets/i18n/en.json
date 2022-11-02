@@ -1,0 +1,17 @@
+{
+    "PAGES": {
+        "HOME": {
+            "TITLE": "The Movment Test",
+            "CONTENT": "Sum x+y+z",
+            "DEDO_RECONOCIDO": "Recognized finger!",
+            "DEDO_NO_RECONOCIDO": "Can't recognize the finger! ",
+            "INICIAR_BTN": "Start",
+            "DETENER_BTN": "Stop",
+            "DEDO_BTN": "Finger",
+            "GUARDAR_STG": "Save on Storage",
+            "RESCATAR_STG": "Obtain name on Storage",
+            "EL_NOMBRE_ES": "The name is: ",
+            "NO_HAY_DATOS": "No data stored in the system"
+        }
+    }
+}
